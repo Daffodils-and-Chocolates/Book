@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "book_backend": {
+      "main": "src/book_backend/main.mo",
+      "type": "motoko"
+    },
+    "book_frontend": {
+      "dependencies": [
+        "book_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/book_frontend/src/index.html"
+      },
+      "source": [
+        "src/book_frontend/assets",
+        "dist/book_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
